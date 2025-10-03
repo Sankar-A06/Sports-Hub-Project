@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Scheduler</title>
+    <title>GameHub - Sports Event Manager</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/activity-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -13,18 +13,18 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <i class="fas fa-futbol"></i>
-                <span>Sports Scheduler</span>
+                <i class="fas fa-gamepad"></i>
+                <span>GameHub</span>
             </div>
             <div class="nav-menu" id="navMenu">
                 <div class="nav-item" id="homeNav">
                     <a href="#" onclick="showSection('home')">Home</a>
                 </div>
                 <div class="nav-item" id="sessionsNav">
-                    <a href="#" onclick="showSection('sessions')">Sessions</a>
+                    <a href="#" onclick="showSection('sessions')">Events</a>
                 </div>
                 <div class="nav-item" id="mySessionsNav" style="display: none;">
-                    <a href="#" onclick="showSection('mySessions')">My Sessions</a>
+                    <a href="#" onclick="showSection('mySessions')">My Events</a>
                 </div>
                 <div class="nav-item" id="activityNav" style="display: none;">
                     <a href="#" onclick="showSection('activity')">Activity</a>
@@ -33,7 +33,7 @@
                     <a href="#" onclick="showSection('admin')">Admin</a>
                 </div>
                 <div class="nav-item" id="authNav">
-                    <a href="#" onclick="showSection('auth')">Sign In</a>
+                    <a href="#" onclick="showSection('auth')">Join GameHub</a>
                 </div>
                 <div class="nav-item" id="userNav" style="display: none;">
                     <span id="userName"></span>
@@ -54,29 +54,29 @@
         <!-- Home Section -->
         <section id="home" class="section active">
             <div class="hero">
-                <h1>Welcome to Sports Scheduler</h1>
-                <p>Find and join sports sessions in your area, or create your own!</p>
+                <h1>Welcome to GameHub</h1>
+                <p>Your Ultimate Sports Event Management Platform</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="showSection('sessions')">Browse Sessions</button>
-                    <button class="btn btn-secondary" onclick="showSection('auth')">Get Started</button>
+                    <button class="btn btn-primary" onclick="showSection('sessions')">Browse Events</button>
+                    <button class="btn btn-secondary" onclick="showSection('auth')">Join GameHub</button>
                 </div>
             </div>
             
             <div class="features">
                 <div class="feature-card">
                     <i class="fas fa-calendar-plus"></i>
-                    <h3>Create Sessions</h3>
-                    <p>Create sports sessions and invite other players to join</p>
+                    <h3>Create Events</h3>
+                    <p>Organize your own sports events and invite players to join</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-users"></i>
-                    <h3>Join Sessions</h3>
-                    <p>Browse and join available sports sessions in your area</p>
+                    <h3>Join Events</h3>
+                    <p>Discover and participate in exciting sports events</p>
                 </div>
                 <div class="feature-card">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Track Activity</h3>
-                    <p>Keep track of your sessions and sports activity</p>
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your sports journey and event participation</p>
                 </div>
             </div>
         </section>
@@ -136,9 +136,9 @@
         <!-- Sessions Section -->
         <section id="sessions" class="section">
             <div class="section-header">
-                <h2>Available Sessions</h2>
+                <h2>Available Events</h2>
                 <button class="btn btn-primary" onclick="showCreateSessionForm()" id="createSessionBtn" style="display: none;">
-                    <i class="fas fa-plus"></i> Create Session
+                    <i class="fas fa-plus"></i> Create Event
                 </button>
             </div>
             
