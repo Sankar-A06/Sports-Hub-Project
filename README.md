@@ -1,22 +1,22 @@
-# FitTracker Pro 🏋️‍♂️
+# SportsHub Pro ⚽
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0+-green.svg)](https://www.mongodb.com/)
 [![Express.js](https://img.shields.io/badge/Express.js-4.18+-blue.svg)](https://expressjs.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**FitTracker Pro** is a comprehensive fitness and workout management platform designed to help users track their fitness journey, monitor progress, and achieve their health goals with precision.
+**SportsHub Pro** is a comprehensive sports event management platform designed to connect athletes, organize tournaments, and create epic sports experiences with a modern, vibrant design.
 
 ## 🌟 Features
 
-- **Workout Management**: Create, join, and manage fitness sessions
-- **Progress Tracking**: Monitor your fitness journey with detailed analytics
-- **Community Features**: Connect with fellow fitness enthusiasts
+- **Event Management**: Create, join, and manage sports sessions
 - **Real-time Updates**: Live session updates and notifications
 - **User Authentication**: Secure signup/signin with JWT tokens
 - **Admin Panel**: Comprehensive management tools for administrators
-- **Responsive Design**: Beautiful UI that works on all devices
+- **Responsive Design**: Beautiful modern UI with glassmorphism effects
 - **Role-based Access**: Player/Admin role management
+- **Community Features**: Connect with fellow athletes
+- **Modern Design**: Vibrant green/orange color scheme with floating animations
 
 ## 🚀 Live Demo
 
@@ -26,8 +26,8 @@
 ## 📸 Screenshots
 
 ![Homepage](screenshots/homepage.png)
-![Workouts](screenshots/workouts.png)
-![Progress](screenshots/progress.png)
+![Events](screenshots/events.png)
+![Activity](screenshots/activity.png)
 
 ## 🛠️ Quick Start
 
@@ -112,10 +112,11 @@
 
 ### Frontend
 - **HTML5** - Markup
-- **CSS3** - Styling with glassmorphism design
+- **CSS3** - Modern styling with glassmorphism design
 - **Vanilla JavaScript** - Client-side logic
 - **Font Awesome** - Icons
 - **Responsive Design** - Mobile-first approach
+- **Modern Animations** - Floating cards and smooth transitions
 
 ### DevOps
 - **Git** - Version control
@@ -130,11 +131,11 @@
 - `POST /api/auth/signin` - User login
 - `POST /api/auth/change-password` - Change password
 
-### Workouts
-- `GET /api/sessions` - Get all workouts
-- `POST /api/sessions` - Create new workout
-- `PUT /api/sessions/:id` - Update workout
-- `DELETE /api/sessions/:id` - Delete workout
+### Events
+- `GET /api/sessions` - Get all events
+- `POST /api/sessions` - Create new event
+- `PUT /api/sessions/:id` - Update event
+- `DELETE /api/sessions/:id` - Delete event
 
 ### Admin
 - `GET /api/admin/users` - Get all users
@@ -145,16 +146,25 @@
 
 ### For Users
 1. **Sign Up**: Create your account
-2. **Browse Workouts**: Explore available fitness sessions
-3. **Join Sessions**: Participate in workouts
-4. **Track Progress**: Monitor your fitness journey
-5. **Create Workouts**: Host your own fitness sessions
+2. **Browse Events**: Explore available sports sessions
+3. **Join Sessions**: Participate in sports events
+4. **Track Activity**: Monitor your sports participation
+5. **Create Events**: Host your own tournaments
 
 ### For Administrators
 1. **User Management**: Manage user accounts
-2. **Session Oversight**: Monitor all workouts
+2. **Event Oversight**: Monitor all sports events
 3. **Content Moderation**: Ensure community guidelines
 4. **Analytics**: View platform statistics
+
+## 🎨 Design Features
+
+- **Modern Glassmorphism**: Translucent cards with backdrop blur effects
+- **Vibrant Color Scheme**: Green to orange gradient backgrounds
+- **Floating Animations**: Dynamic floating cards on homepage
+- **Responsive Layout**: Adapts beautifully to all screen sizes
+- **Smooth Transitions**: Elegant hover effects and animations
+- **Professional Typography**: Clean, readable fonts
 
 ## 🤝 Contributing
 
@@ -187,7 +197,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 💬 Support
 
 - **Discord**: [Join our community](https://discord.gg/your-discord)
-- **Email**: support@fittrackerpro.com
+- **Email**: support@sportshubpro.com
 - **Issues**: [GitHub Issues](https://github.com/Sankar-A06/Sports-Hub-Project/issues)
 
 ## 📈 Star History
