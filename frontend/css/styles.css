@@ -109,36 +109,371 @@ body {
     display: block;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
+/* Hero Banner */
+.hero-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
     padding: 4rem 0;
-    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 4rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hero-visual {
+    position: relative;
+    height: 400px;
+}
+
+.floating-cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
-    color: white;
-    border-radius: 25px;
-    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: float 6s ease-in-out infinite;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.floating-card i {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.floating-card span {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.card-2 {
+    top: 50%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+.card-3 {
+    bottom: 20%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Quick Actions */
+.quick-actions {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
     font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.2rem;
+    text-align: center;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.hero-buttons {
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.action-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.action-card:hover .action-arrow {
+    transform: translateX(10px);
+}
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.action-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.action-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.action-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.action-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+/* Trending Sports */
+.trending-section {
+    margin-bottom: 4rem;
+}
+
+.sports-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.sport-item.trending {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sport-item.trending:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.sport-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sport-icon i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.sport-info h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.sport-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.sport-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Community Highlights */
+.community-section {
+    margin-bottom: 2rem;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.highlight-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-avatar i {
+    color: white;
+    font-size: 1rem;
+}
+
+.highlight-info h4 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.highlight-info span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.highlight-stats {
     display: flex;
     gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+
+.highlight-stats span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.highlight-stats i {
+    color: #ff6b6b;
 }
 
 /* Features */
@@ -748,7 +1083,8 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #667eea;
+        background-color: rgba(102, 126, 234, 0.95);
+        backdrop-filter: blur(20px);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -768,19 +1104,66 @@ body {
         padding: 1rem;
     }
     
-    .hero h1 {
-        font-size: 2rem;
+    /* Hero Banner Mobile */
+    .hero-banner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+    .hero-title {
+        font-size: 2.5rem;
     }
     
-    .features {
+    .hero-stats {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .hero-visual {
+        height: 300px;
+    }
+    
+    .floating-card {
+        padding: 1rem;
+    }
+    
+    .floating-card i {
+        font-size: 1.5rem;
+    }
+    
+    /* Quick Actions Mobile */
+    .action-grid {
         grid-template-columns: 1fr;
     }
     
+    .action-card {
+        padding: 1.5rem;
+    }
+    
+    /* Trending Sports Mobile */
+    .sports-carousel {
+        grid-template-columns: 1fr;
+    }
+    
+    .sport-item.trending {
+        padding: 1rem;
+    }
+    
+    /* Community Highlights Mobile */
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-card {
+        padding: 1rem;
+    }
+    
+    /* Other responsive styles */
     .admin-container {
         grid-template-columns: 1fr;
     }
