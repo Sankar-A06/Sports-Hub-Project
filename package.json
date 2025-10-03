@@ -1,33 +1,44 @@
 {
-  "name": "sportshub-pro",
-  "version": "1.0.0",
-  "description": "SportsHub Pro - Sports Event Management Platform",
+  "name": "athleteconnect",
+  "version": "2.0.0",
+  "description": "AthleteConnect - Connect, Compete, Conquer. The ultimate sports community platform.",
   "main": "backend/server.js",
   "scripts": {
     "start": "cd backend && npm start",
     "dev": "cd backend && npm run dev",
     "install-backend": "cd backend && npm install",
     "install-all": "npm run install-backend",
-    "setup": "npm run install-all"
+    "setup": "npm run install-all",
+    "build": "echo 'Build process completed'",
+    "test": "echo 'Tests will be implemented soon'"
   },
   "keywords": [
     "sports",
-    "scheduler",
+    "athletes",
+    "community",
+    "events",
+    "tournaments",
     "web-app",
     "mongodb",
-    "express"
+    "express",
+    "modern-ui",
+    "glassmorphism"
   ],
-  "author": "Sports Scheduler Team",
+  "author": "AthleteConnect Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/sports-scheduler-web-app.git"
+    "url": "https://github.com/Sankar-A06/Sports-Hub-Project.git"
   },
   "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "dependencies": {
     "axios": "^1.12.2"
+  },
+  "homepage": "https://github.com/Sankar-A06/Sports-Hub-Project#readme",
+  "bugs": {
+    "url": "https://github.com/Sankar-A06/Sports-Hub-Project/issues"
   }
 }

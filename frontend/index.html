@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportsHub Pro - Sports Event Manager</title>
+    <title>AthleteConnect - Connect, Compete, Conquer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/activity-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
                 <div class="nav-brand">
-                    <i class="fas fa-futbol"></i>
-                    <span>SportsHub Pro</span>
+                    <div class="brand-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <span>AthleteConnect</span>
                 </div>
             <div class="nav-menu" id="navMenu">
                 <div class="nav-item" id="homeNav">
@@ -33,7 +36,7 @@
                     <a href="#" onclick="showSection('admin')">Admin</a>
                 </div>
                 <div class="nav-item" id="authNav">
-                    <a href="#" onclick="showSection('auth')">Join SportsHub</a>
+                    <a href="#" onclick="showSection('auth')">Join AthleteConnect</a>
                 </div>
                 <div class="nav-item" id="userNav" style="display: none;">
                     <span id="userName"></span>
@@ -58,20 +61,20 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1 class="hero-title">
-                            <span class="gradient-text">Dominate</span> The Sports Arena
+                            <span class="gradient-text">Connect</span> • <span class="gradient-text">Compete</span> • <span class="gradient-text">Conquer</span>
                         </h1>
-                        <p class="hero-subtitle">Connect with athletes, organize tournaments, and create epic sports experiences</p>
+                        <p class="hero-subtitle">Join the ultimate sports community where athletes meet, compete, and achieve greatness together</p>
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">Active Players</span>
+                                <span class="stat-number">2.5K+</span>
+                                <span class="stat-label">Active Athletes</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">50+</span>
+                                <span class="stat-number">150+</span>
                                 <span class="stat-label">Events Weekly</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">15+</span>
+                                <span class="stat-number">25+</span>
                                 <span class="stat-label">Sports</span>
                             </div>
                         </div>
@@ -79,7 +82,7 @@
                     <div class="hero-actions">
                         <button class="btn btn-primary btn-large" onclick="showSection('sessions')">
                             <i class="fas fa-rocket"></i>
-                            Start Playing
+                            Find Events
                         </button>
                         <button class="btn btn-outline btn-large" onclick="showSection('auth')">
                             <i class="fas fa-user-plus"></i>
@@ -101,44 +104,48 @@
                             <i class="fas fa-star"></i>
                             <span>Top Players</span>
                         </div>
+                        <div class="floating-card card-4">
+                            <i class="fas fa-medal"></i>
+                            <span>Achievements</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Quick Actions -->
             <div class="quick-actions">
-                <h2 class="section-title">Quick Actions</h2>
+                <h2 class="section-title">Get Started</h2>
                 <div class="action-grid">
                     <div class="action-card" onclick="showSection('sessions')">
                         <div class="action-icon">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-search-location"></i>
                         </div>
                         <h3>Find Events</h3>
-                        <p>Discover nearby sports events</p>
+                        <p>Discover exciting sports events near you</p>
                         <div class="action-arrow">→</div>
                     </div>
                     <div class="action-card" onclick="showCreateSessionForm()">
                         <div class="action-icon">
-                            <i class="fas fa-plus-circle"></i>
+                            <i class="fas fa-calendar-plus"></i>
                         </div>
-                        <h3>Host Event</h3>
-                        <p>Create your own tournament</p>
+                        <h3>Create Event</h3>
+                        <p>Organize your own sports tournament</p>
                         <div class="action-arrow">→</div>
                     </div>
                     <div class="action-card" onclick="showSection('activity')">
                         <div class="action-icon">
-                            <i class="fas fa-chart-bar"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>My Stats</h3>
-                        <p>Track your performance</p>
+                        <h3>My Progress</h3>
+                        <p>Track your athletic journey</p>
                         <div class="action-arrow">→</div>
                     </div>
                     <div class="action-card" onclick="showSection('admin')">
                         <div class="action-icon">
-                            <i class="fas fa-crown"></i>
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3>Admin Panel</h3>
-                        <p>Manage community</p>
+                        <h3>Admin Hub</h3>
+                        <p>Manage the community</p>
                         <div class="action-arrow">→</div>
                     </div>
                 </div>
@@ -146,7 +153,7 @@
 
             <!-- Trending Sports -->
             <div class="trending-section">
-                <h2 class="section-title">Trending Sports</h2>
+                <h2 class="section-title">Popular Sports</h2>
                 <div class="sports-carousel">
                     <div class="sport-item trending">
                         <div class="sport-icon">
@@ -154,9 +161,9 @@
                         </div>
                         <div class="sport-info">
                             <h3>Football</h3>
-                            <p>12 events today</p>
+                            <p>18 events today</p>
                         </div>
-                        <div class="sport-badge">Hot</div>
+                        <div class="sport-badge">Trending</div>
                     </div>
                     <div class="sport-item trending">
                         <div class="sport-icon">
@@ -164,7 +171,7 @@
                         </div>
                         <div class="sport-info">
                             <h3>Basketball</h3>
-                            <p>8 events today</p>
+                            <p>12 events today</p>
                         </div>
                         <div class="sport-badge">Popular</div>
                     </div>
@@ -174,9 +181,9 @@
                         </div>
                         <div class="sport-info">
                             <h3>Tennis</h3>
-                            <p>6 events today</p>
+                            <p>8 events today</p>
                         </div>
-                        <div class="sport-badge">New</div>
+                        <div class="sport-badge">Rising</div>
                     </div>
                     <div class="sport-item trending">
                         <div class="sport-icon">
@@ -184,16 +191,36 @@
                         </div>
                         <div class="sport-info">
                             <h3>Volleyball</h3>
-                            <p>4 events today</p>
+                            <p>6 events today</p>
                         </div>
-                        <div class="sport-badge">Rising</div>
+                        <div class="sport-badge">New</div>
+                    </div>
+                    <div class="sport-item trending">
+                        <div class="sport-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="sport-info">
+                            <h3>Running</h3>
+                            <p>15 events today</p>
+                        </div>
+                        <div class="sport-badge">Hot</div>
+                    </div>
+                    <div class="sport-item trending">
+                        <div class="sport-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="sport-info">
+                            <h3>Fitness</h3>
+                            <p>10 events today</p>
+                        </div>
+                        <div class="sport-badge">Growing</div>
                     </div>
                 </div>
             </div>
 
             <!-- Community Highlights -->
             <div class="community-section">
-                <h2 class="section-title">Community Highlights</h2>
+                <h2 class="section-title">Athlete Stories</h2>
                 <div class="highlights-grid">
                     <div class="highlight-card">
                         <div class="highlight-header">
@@ -202,13 +229,13 @@
                             </div>
                             <div class="highlight-info">
                                 <h4>Alex Johnson</h4>
-                                <span>Just won Football Championship</span>
+                                <span>Football Champion</span>
                             </div>
                         </div>
-                        <p>"Amazing tournament! Can't wait for the next one!"</p>
+                        <p>"AthleteConnect helped me find my team and win the championship! The community support is incredible."</p>
                         <div class="highlight-stats">
-                            <span><i class="fas fa-heart"></i> 24</span>
-                            <span><i class="fas fa-comment"></i> 8</span>
+                            <span><i class="fas fa-heart"></i> 42</span>
+                            <span><i class="fas fa-comment"></i> 12</span>
                         </div>
                     </div>
                     <div class="highlight-card">
@@ -218,13 +245,13 @@
                             </div>
                             <div class="highlight-info">
                                 <h4>Sarah Chen</h4>
-                                <span>Organized Tennis Tournament</span>
+                                <span>Tennis Organizer</span>
                             </div>
                         </div>
-                        <p>"Great turnout! Thanks to all participants!"</p>
+                        <p>"Organizing tournaments has never been easier. The platform makes everything seamless!"</p>
                         <div class="highlight-stats">
-                            <span><i class="fas fa-heart"></i> 18</span>
-                            <span><i class="fas fa-comment"></i> 12</span>
+                            <span><i class="fas fa-heart"></i> 28</span>
+                            <span><i class="fas fa-comment"></i> 8</span>
                         </div>
                     </div>
                     <div class="highlight-card">
@@ -237,9 +264,9 @@
                                 <span>Basketball MVP</span>
                             </div>
                         </div>
-                        <p>"Best game ever! The competition was fierce!"</p>
+                        <p>"From pickup games to competitive leagues, AthleteConnect has it all. Game changer!"</p>
                         <div class="highlight-stats">
-                            <span><i class="fas fa-heart"></i> 31</span>
+                            <span><i class="fas fa-heart"></i> 35</span>
                             <span><i class="fas fa-comment"></i> 15</span>
                         </div>
                     </div>

@@ -1,22 +1,24 @@
-# SportsHub Pro ⚽
+# AthleteConnect ⚡
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0+-green.svg)](https://www.mongodb.com/)
 [![Express.js](https://img.shields.io/badge/Express.js-4.18+-blue.svg)](https://expressjs.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**SportsHub Pro** is a comprehensive sports event management platform designed to connect athletes, organize tournaments, and create epic sports experiences with a modern, vibrant design.
+**AthleteConnect** is the ultimate sports community platform designed to connect athletes, organize tournaments, and create epic sports experiences with a modern, sleek design that embodies the spirit of competition and achievement.
 
 ## 🌟 Features
 
-- **Event Management**: Create, join, and manage sports sessions
-- **Real-time Updates**: Live session updates and notifications
+- **Event Management**: Create, join, and manage sports sessions with ease
+- **Real-time Updates**: Live session updates and instant notifications
 - **User Authentication**: Secure signup/signin with JWT tokens
 - **Admin Panel**: Comprehensive management tools for administrators
 - **Responsive Design**: Beautiful modern UI with glassmorphism effects
 - **Role-based Access**: Player/Admin role management
-- **Community Features**: Connect with fellow athletes
-- **Modern Design**: Vibrant green/orange color scheme with floating animations
+- **Community Features**: Connect with fellow athletes worldwide
+- **Modern Design**: Sleek purple/blue gradient with floating animations
+- **Performance Optimized**: Fast loading with smooth animations
+- **Accessibility**: Keyboard navigation and screen reader support
 
 ## 🚀 Live Demo
 
@@ -111,12 +113,13 @@
 - **CORS** - Cross-origin resource sharing
 
 ### Frontend
-- **HTML5** - Markup
-- **CSS3** - Modern styling with glassmorphism design
-- **Vanilla JavaScript** - Client-side logic
-- **Font Awesome** - Icons
-- **Responsive Design** - Mobile-first approach
-- **Modern Animations** - Floating cards and smooth transitions
+- **HTML5** - Modern semantic markup
+- **CSS3** - Advanced styling with CSS custom properties
+- **Vanilla JavaScript** - Enhanced client-side logic with modern ES6+
+- **Font Awesome** - Professional icon library
+- **Google Fonts** - Poppins typography for modern look
+- **Responsive Design** - Mobile-first approach with CSS Grid/Flexbox
+- **Modern Animations** - Intersection Observer API for scroll animations
 
 ### DevOps
 - **Git** - Version control
@@ -130,41 +133,58 @@
 - `POST /api/auth/signup` - User registration
 - `POST /api/auth/signin` - User login
 - `POST /api/auth/change-password` - Change password
+- `POST /api/auth/forgot-password` - Password reset request
+- `POST /api/auth/reset-password` - Password reset confirmation
 
 ### Events
 - `GET /api/sessions` - Get all events
 - `POST /api/sessions` - Create new event
 - `PUT /api/sessions/:id` - Update event
 - `DELETE /api/sessions/:id` - Delete event
+- `POST /api/sessions/:id/join` - Join an event
+- `POST /api/sessions/:id/cancel` - Cancel an event
 
 ### Admin
 - `GET /api/admin/users` - Get all users
 - `GET /api/admin/sessions` - Get all sessions
+- `GET /api/admin/reports` - Generate reports
 - `DELETE /api/admin/users/:id` - Delete user
 
 ## 📖 Usage Guide
 
-### For Users
-1. **Sign Up**: Create your account
+### For Athletes
+1. **Sign Up**: Create your AthleteConnect account
 2. **Browse Events**: Explore available sports sessions
 3. **Join Sessions**: Participate in sports events
-4. **Track Activity**: Monitor your sports participation
+4. **Track Progress**: Monitor your athletic journey
 5. **Create Events**: Host your own tournaments
+6. **Connect**: Build your sports network
 
 ### For Administrators
-1. **User Management**: Manage user accounts
+1. **User Management**: Manage athlete accounts
 2. **Event Oversight**: Monitor all sports events
 3. **Content Moderation**: Ensure community guidelines
-4. **Analytics**: View platform statistics
+4. **Analytics**: View platform statistics and reports
+5. **Sport Management**: Add and manage sports categories
 
 ## 🎨 Design Features
 
 - **Modern Glassmorphism**: Translucent cards with backdrop blur effects
-- **Vibrant Color Scheme**: Green to orange gradient backgrounds
+- **Sleek Color Scheme**: Purple to blue gradient backgrounds
 - **Floating Animations**: Dynamic floating cards on homepage
 - **Responsive Layout**: Adapts beautifully to all screen sizes
 - **Smooth Transitions**: Elegant hover effects and animations
-- **Professional Typography**: Clean, readable fonts
+- **Professional Typography**: Poppins font family for modern readability
+- **Performance Optimized**: CSS custom properties and efficient animations
+- **Accessibility**: ARIA labels and keyboard navigation support
+
+## 🚀 Performance Features
+
+- **Lazy Loading**: Images and components load as needed
+- **Intersection Observer**: Efficient scroll-based animations
+- **CSS Custom Properties**: Consistent theming and easy customization
+- **Optimized Animations**: Hardware-accelerated transforms
+- **Responsive Images**: Adaptive image loading for different screen sizes
 
 ## 🤝 Contributing
 
@@ -191,13 +211,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Font Awesome for the amazing icons
+- Google Fonts for Poppins typography
 - MongoDB Atlas for database hosting
 - The open-source community for inspiration
 
 ## 💬 Support
 
 - **Discord**: [Join our community](https://discord.gg/your-discord)
-- **Email**: support@sportshubpro.com
+- **Email**: support@athleteconnect.com
 - **Issues**: [GitHub Issues](https://github.com/Sankar-A06/Sports-Hub-Project/issues)
 
 ## 📈 Star History
@@ -207,3 +228,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ⭐ **Star this repository if you found it helpful!**
+
+🏆 **AthleteConnect - Where Champions Are Made**

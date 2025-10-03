@@ -8,12 +8,121 @@ let currentSessionToCancel = null;
 // API Configuration
 const API_BASE_URL = 'http://localhost:5000/api';
 
+// Enhanced UI animations and interactions
+const UI_ENHANCEMENTS = {
+    // Add smooth scrolling to sections
+    smoothScroll: true,
+    // Add loading animations
+    loadingAnimations: true,
+    // Add hover effects
+    hoverEffects: true,
+    // Add notification sounds (optional)
+    soundEffects: false
+};
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
+    initializeApp();
     checkAuthStatus();
     loadInitialData();
     setupEventListeners();
+    setupUIEnhancements();
 });
+
+// Enhanced app initialization
+function initializeApp() {
+    // Add loading animation
+    if (UI_ENHANCEMENTS.loadingAnimations) {
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            document.body.style.opacity = '1';
+        }, 100);
+    }
+    
+    // Add app name to console
+    console.log('%c🏆 AthleteConnect - Connect, Compete, Conquer', 'color: #667eea; font-size: 16px; font-weight: bold;');
+    console.log('%cWelcome to the ultimate sports community platform!', 'color: #764ba2; font-size: 12px;');
+}
+
+// Enhanced UI setup
+function setupUIEnhancements() {
+    // Add smooth scrolling
+    if (UI_ENHANCEMENTS.smoothScroll) {
+        document.documentElement.style.scrollBehavior = 'smooth';
+    }
+    
+    // Add intersection observer for animations
+    setupScrollAnimations();
+    
+    // Add keyboard navigation
+    setupKeyboardNavigation();
+    
+    // Add performance monitoring
+    setupPerformanceMonitoring();
+}
+
+// Scroll animations using Intersection Observer
+function setupScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.action-card, .sport-item, .highlight-card, .session-card');
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+    });
+}
+
+// Keyboard navigation
+function setupKeyboardNavigation() {
+    document.addEventListener('keydown', (e) => {
+        // ESC key to close modals
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+        
+        // Ctrl/Cmd + K for search (if search functionality exists)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.getElementById('locationFilter');
+            if (searchInput) {
+                searchInput.focus();
+            }
+        }
+    });
+}
+
+// Performance monitoring
+function setupPerformanceMonitoring() {
+    // Monitor page load performance
+    window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        console.log(`🚀 AthleteConnect loaded in ${perfData.loadEventEnd - perfData.loadEventStart}ms`);
+    });
+}
+
+// Close all modals
+function closeAllModals() {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.style.display = 'none';
+    });
+}
 
 // Authentication Functions
 function checkAuthStatus() {
@@ -59,7 +168,7 @@ function signOut() {
     authToken = null;
     currentUser = null;
     updateUIForGuest();
-    showToast('Signed out successfully', 'info');
+        showToast('Signed out successfully from AthleteConnect', 'info');
 }
 
 // Event Listeners
@@ -134,7 +243,7 @@ async function handleSignIn(e) {
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         
         updateUIForAuthenticatedUser();
-        showToast('Signed in successfully!', 'success');
+        showToast('Welcome to AthleteConnect! Signed in successfully!', 'success');
         
         // Clear form
         document.getElementById('signinForm').reset();
@@ -168,7 +277,7 @@ async function handleSignUp(e) {
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
         
         updateUIForAuthenticatedUser();
-        showToast('Account created successfully!', 'success');
+        showToast('Welcome to AthleteConnect! Account created successfully!', 'success');
         
         // Clear form
         document.getElementById('signupForm').reset();
@@ -556,7 +665,7 @@ async function handleCreateSession(e) {
             })
         });
         
-        showToast('Session created successfully!', 'success');
+        showToast('Session created successfully on AthleteConnect!', 'success');
         closeCreateSessionModal();
         loadSessions();
         loadUserActivity(); // Refresh activity stats
@@ -575,7 +684,7 @@ async function joinSession(sessionId) {
             method: 'POST'
         });
         
-        showToast('Successfully joined the session!', 'success');
+        showToast('Successfully joined the session on AthleteConnect!', 'success');
         loadSessions();
         
     } catch (error) {
@@ -700,17 +809,101 @@ function showToast(message, type = 'info') {
     const icon = type === 'success' ? 'check-circle' : 
                  type === 'error' ? 'exclamation-circle' : 'info-circle';
     
+    const emoji = type === 'success' ? '🎉' : 
+                  type === 'error' ? '⚠️' : 'ℹ️';
+    
     toast.innerHTML = `
-        <i class="fas fa-${icon}"></i>
-        <span>${message}</span>
+        <div class="toast-icon">
+            <i class="fas fa-${icon}"></i>
+        </div>
+        <div class="toast-content">
+            <span class="toast-emoji">${emoji}</span>
+            <span class="toast-message">${message}</span>
+        </div>
+        <button class="toast-close" onclick="this.parentElement.remove()">
+            <i class="fas fa-times"></i>
+        </button>
     `;
+    
+    // Add enhanced styling
+    toast.style.cssText = `
+        background: white;
+        padding: 1.25rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        min-width: 350px;
+        animation: slideInRight 0.3s ease-out;
+        border-left: 4px solid ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+        position: relative;
+        overflow: hidden;
+    `;
+    
+    // Add close button styling
+    const closeBtn = toast.querySelector('.toast-close');
+    closeBtn.style.cssText = `
+        background: none;
+        border: none;
+        color: #6b7280;
+        cursor: pointer;
+        padding: 0.25rem;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    `;
+    
+    closeBtn.addEventListener('mouseenter', () => {
+        closeBtn.style.background = '#f3f4f6';
+        closeBtn.style.color = '#374151';
+    });
+    
+    closeBtn.addEventListener('mouseleave', () => {
+        closeBtn.style.background = 'none';
+        closeBtn.style.color = '#6b7280';
+    });
     
     toastContainer.appendChild(toast);
     
-    // Auto remove after 5 seconds
+    // Auto remove after 5 seconds with fade out
     setTimeout(() => {
-        toast.remove();
+        toast.style.animation = 'slideOutRight 0.3s ease-in forwards';
+        setTimeout(() => {
+            if (toast.parentElement) {
+                toast.remove();
+            }
+        }, 300);
     }, 5000);
+    
+    // Add CSS animations if not already present
+    if (!document.getElementById('toast-animations')) {
+        const style = document.createElement('style');
+        style.id = 'toast-animations';
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            @keyframes slideOutRight {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
 }
 
 // Password Change Functions
