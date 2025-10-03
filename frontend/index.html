@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameHub - Sports Event Manager</title>
+    <title>FitTracker Pro - Fitness & Workout Manager</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/activity-styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -12,19 +12,19 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <i class="fas fa-gamepad"></i>
-                <span>GameHub</span>
-            </div>
+                <div class="nav-brand">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>FitTracker Pro</span>
+                </div>
             <div class="nav-menu" id="navMenu">
                 <div class="nav-item" id="homeNav">
                     <a href="#" onclick="showSection('home')">Home</a>
                 </div>
                 <div class="nav-item" id="sessionsNav">
-                    <a href="#" onclick="showSection('sessions')">Events</a>
+                    <a href="#" onclick="showSection('sessions')">Workouts</a>
                 </div>
                 <div class="nav-item" id="mySessionsNav" style="display: none;">
-                    <a href="#" onclick="showSection('mySessions')">My Events</a>
+                    <a href="#" onclick="showSection('mySessions')">My Workouts</a>
                 </div>
                 <div class="nav-item" id="activityNav" style="display: none;">
                     <a href="#" onclick="showSection('activity')">Activity</a>
@@ -33,7 +33,7 @@
                     <a href="#" onclick="showSection('admin')">Admin</a>
                 </div>
                 <div class="nav-item" id="authNav">
-                    <a href="#" onclick="showSection('auth')">Join GameHub</a>
+                    <a href="#" onclick="showSection('auth')">Join FitTracker</a>
                 </div>
                 <div class="nav-item" id="userNav" style="display: none;">
                     <span id="userName"></span>
@@ -58,28 +58,28 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1 class="hero-title">
-                            <span class="gradient-text">Level Up</span> Your Sports Experience
+                            <span class="gradient-text">Transform</span> Your Fitness Journey
                         </h1>
-                        <p class="hero-subtitle">Connect with athletes, organize tournaments, and dominate the game</p>
+                        <p class="hero-subtitle">Track workouts, monitor progress, and achieve your fitness goals with precision</p>
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">Active Players</span>
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Active Users</span>
                             </div>
                             <div class="stat-item">
                                 <span class="stat-number">50+</span>
-                                <span class="stat-label">Events Weekly</span>
+                                <span class="stat-label">Workout Types</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Sports</span>
+                                <span class="stat-number">25+</span>
+                                <span class="stat-label">Exercise Categories</span>
                             </div>
                         </div>
                     </div>
                     <div class="hero-actions">
                         <button class="btn btn-primary btn-large" onclick="showSection('sessions')">
-                            <i class="fas fa-rocket"></i>
-                            Start Playing
+                            <i class="fas fa-dumbbell"></i>
+                            Start Training
                         </button>
                         <button class="btn btn-outline btn-large" onclick="showSection('auth')">
                             <i class="fas fa-user-plus"></i>
@@ -90,16 +90,16 @@
                 <div class="hero-visual">
                     <div class="floating-cards">
                         <div class="floating-card card-1">
-                            <i class="fas fa-trophy"></i>
-                            <span>Champions</span>
+                            <i class="fas fa-fire"></i>
+                            <span>Calorie Burn</span>
                         </div>
                         <div class="floating-card card-2">
-                            <i class="fas fa-fire"></i>
-                            <span>Hot Events</span>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Progress</span>
                         </div>
                         <div class="floating-card card-3">
-                            <i class="fas fa-star"></i>
-                            <span>Top Players</span>
+                            <i class="fas fa-trophy"></i>
+                            <span>Achievements</span>
                         </div>
                     </div>
                 </div>
@@ -113,24 +113,24 @@
                         <div class="action-icon">
                             <i class="fas fa-search"></i>
                         </div>
-                        <h3>Find Events</h3>
-                        <p>Discover nearby sports events</p>
+                        <h3>Find Workouts</h3>
+                        <p>Discover fitness routines</p>
                         <div class="action-arrow">→</div>
                     </div>
                     <div class="action-card" onclick="showCreateSessionForm()">
                         <div class="action-icon">
                             <i class="fas fa-plus-circle"></i>
                         </div>
-                        <h3>Host Event</h3>
-                        <p>Create your own tournament</p>
+                        <h3>Create Workout</h3>
+                        <p>Design your routine</p>
                         <div class="action-arrow">→</div>
                     </div>
                     <div class="action-card" onclick="showSection('activity')">
                         <div class="action-icon">
                             <i class="fas fa-chart-bar"></i>
                         </div>
-                        <h3>My Stats</h3>
-                        <p>Track your performance</p>
+                        <h3>My Progress</h3>
+                        <p>Track your fitness</p>
                         <div class="action-arrow">→</div>
                     </div>
                     <div class="action-card" onclick="showSection('admin')">
@@ -138,53 +138,53 @@
                             <i class="fas fa-crown"></i>
                         </div>
                         <h3>Admin Panel</h3>
-                        <p>Manage your community</p>
+                        <p>Manage community</p>
                         <div class="action-arrow">→</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Trending Sports -->
+            <!-- Trending Workouts -->
             <div class="trending-section">
-                <h2 class="section-title">Trending Sports</h2>
+                <h2 class="section-title">Trending Workouts</h2>
                 <div class="sports-carousel">
                     <div class="sport-item trending">
                         <div class="sport-icon">
-                            <i class="fas fa-futbol"></i>
+                            <i class="fas fa-dumbbell"></i>
                         </div>
                         <div class="sport-info">
-                            <h3>Football</h3>
-                            <p>12 events today</p>
+                            <h3>Strength Training</h3>
+                            <p>15 workouts today</p>
                         </div>
                         <div class="sport-badge">Hot</div>
                     </div>
                     <div class="sport-item trending">
                         <div class="sport-icon">
-                            <i class="fas fa-basketball-ball"></i>
+                            <i class="fas fa-running"></i>
                         </div>
                         <div class="sport-info">
-                            <h3>Basketball</h3>
-                            <p>8 events today</p>
+                            <h3>Cardio</h3>
+                            <p>12 workouts today</p>
                         </div>
                         <div class="sport-badge">Popular</div>
                     </div>
                     <div class="sport-item trending">
                         <div class="sport-icon">
-                            <i class="fas fa-table-tennis"></i>
+                            <i class="fas fa-leaf"></i>
                         </div>
                         <div class="sport-info">
-                            <h3>Tennis</h3>
-                            <p>6 events today</p>
+                            <h3>Yoga</h3>
+                            <p>8 workouts today</p>
                         </div>
                         <div class="sport-badge">New</div>
                     </div>
                     <div class="sport-item trending">
                         <div class="sport-icon">
-                            <i class="fas fa-volleyball-ball"></i>
+                            <i class="fas fa-swimmer"></i>
                         </div>
                         <div class="sport-info">
-                            <h3>Volleyball</h3>
-                            <p>4 events today</p>
+                            <h3>Swimming</h3>
+                            <p>6 workouts today</p>
                         </div>
                         <div class="sport-badge">Rising</div>
                     </div>
@@ -201,29 +201,13 @@
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="highlight-info">
-                                <h4>Alex Johnson</h4>
-                                <span>Just won Football Championship</span>
+                                <h4>Sarah Johnson</h4>
+                                <span>Completed 30-day challenge</span>
                             </div>
                         </div>
-                        <p>"Amazing tournament! Can't wait for the next one!"</p>
+                        <p>"Amazing transformation! Lost 15 pounds in 30 days!"</p>
                         <div class="highlight-stats">
-                            <span><i class="fas fa-heart"></i> 24</span>
-                            <span><i class="fas fa-comment"></i> 8</span>
-                        </div>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-header">
-                            <div class="highlight-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="highlight-info">
-                                <h4>Sarah Chen</h4>
-                                <span>Organized Tennis Tournament</span>
-                            </div>
-                        </div>
-                        <p>"Great turnout! Thanks to all participants!"</p>
-                        <div class="highlight-stats">
-                            <span><i class="fas fa-heart"></i> 18</span>
+                            <span><i class="fas fa-heart"></i> 45</span>
                             <span><i class="fas fa-comment"></i> 12</span>
                         </div>
                     </div>
@@ -233,14 +217,30 @@
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="highlight-info">
-                                <h4>Mike Rodriguez</h4>
-                                <span>Basketball MVP</span>
+                                <h4>Mike Chen</h4>
+                                <span>Hit new PR in deadlift</span>
                             </div>
                         </div>
-                        <p>"Best game ever! The competition was fierce!"</p>
+                        <p>"Finally lifted 300lbs! Thanks to the community support!"</p>
                         <div class="highlight-stats">
-                            <span><i class="fas fa-heart"></i> 31</span>
-                            <span><i class="fas fa-comment"></i> 15</span>
+                            <span><i class="fas fa-heart"></i> 38</span>
+                            <span><i class="fas fa-comment"></i> 18</span>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-header">
+                            <div class="highlight-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>Emma Rodriguez</h4>
+                                <span>Ran first marathon</span>
+                            </div>
+                        </div>
+                        <p>"Crossed the finish line! Never thought I could do it!"</p>
+                        <div class="highlight-stats">
+                            <span><i class="fas fa-heart"></i> 52</span>
+                            <span><i class="fas fa-comment"></i> 25</span>
                         </div>
                     </div>
                 </div>
@@ -302,9 +302,9 @@
         <!-- Sessions Section -->
         <section id="sessions" class="section">
             <div class="section-header">
-                <h2>Available Events</h2>
+                <h2>Available Workouts</h2>
                 <button class="btn btn-primary" onclick="showCreateSessionForm()" id="createSessionBtn" style="display: none;">
-                    <i class="fas fa-plus"></i> Create Event
+                    <i class="fas fa-plus"></i> Create Workout
                 </button>
             </div>
             

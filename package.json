@@ -1,7 +1,7 @@
 {
-  "name": "sports-scheduler-web-app",
+  "name": "fittracker-pro",
   "version": "1.0.0",
-  "description": "A comprehensive web application for scheduling sports sessions",
+  "description": "FitTracker Pro - Comprehensive Fitness & Workout Management Platform",
   "main": "backend/server.js",
   "scripts": {
     "start": "cd backend && npm start",
